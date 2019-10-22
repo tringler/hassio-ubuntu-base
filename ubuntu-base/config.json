@@ -1,11 +1,10 @@
 {
-    "name": "Homegear",
+    "name": "Ubuntu Base",
     "version": "0.1",
-    "slug": "homegear",
-    "description": "Homegear Add-On",
+    "slug": "ubuntu-base",
+    "description": "Ubuntu Base Image Add-On",
     "auto_uart": true,
     "url": "https://github.com/tringler/hassio-ubuntu-base",
-    "webui": "[PROTO:ssl]://[HOST]:[PORT:2001]/admin",
     "startup": "services",
     "arch": [
       "aarch64",
