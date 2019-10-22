@@ -12,7 +12,6 @@ apt install -y homegear homegear-management homegear-adminui homegear-nodes-core
     homegear-homematicwired homegear-insteon homegear-max homegear-philipshue homegear-sonos homegear-kodi \
     homegear-ipcam homegear-beckhoff homegear-knx homegear-enocean homegear-intertechno homegear-nanoleaf \
     homegear-ccu homegear-mbus homegear-influxdb \
-> /dev/null
 
 mkdir -p /config/homegear
 mkdir -p /config/homegear/config
@@ -23,4 +22,4 @@ echo "[INFO] Start Homegear"
 service homegear start
 service homegear-management start
 service homegear-influxdb start
-tail -f /var/log/homegear.log
+tail -f /var/log/homegear/homegear.log
