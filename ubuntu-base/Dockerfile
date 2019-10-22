@@ -13,12 +13,7 @@ RUN \
     apt install -y homegear homegear-management homegear-adminui homegear-nodes-core homegear-nodes-extra homegear-homematicbidcos \
         homegear-homematicwired homegear-insteon homegear-max homegear-philipshue homegear-sonos homegear-kodi \
         homegear-ipcam homegear-beckhoff homegear-knx homegear-enocean homegear-intertechno homegear-nanoleaf \
-        homegear-ccu homegear-mbus homegear-influxdb && \
-    apt clean && \
-    rm -rf \
-        /var/lib/apt/lists/* \
-        /tmp/* \
-        /var/tmp/*
+        homegear-ccu homegear-mbus homegear-influxdb
 
 COPY run.sh /run.sh
 RUN chmod +x /run.sh
