@@ -2,6 +2,7 @@
 ARG BUILD_FROM=homeassistant/base-ubuntu:16.04
 FROM ${BUILD_FROM}
 
+# Homegear installation - https://homegear.eu/downloads.html
 COPY run.sh /run.sh
 RUN chmod +x /run.sh
 ENTRYPOINT ["/bin/bash", "-c", "/run.sh"]
