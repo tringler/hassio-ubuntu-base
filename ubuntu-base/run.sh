@@ -13,6 +13,8 @@ apt install -y homegear homegear-management homegear-adminui homegear-nodes-core
     homegear-ipcam homegear-beckhoff homegear-knx homegear-enocean homegear-intertechno homegear-nanoleaf \
     homegear-ccu homegear-mbus homegear-influxdb
 
+rm /var/lib/homegear/homegear_updated
+
 echo "[INFO] Start Homegear"
 service homegear start
 service homegear-management start
