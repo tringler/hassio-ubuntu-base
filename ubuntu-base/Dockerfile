@@ -14,7 +14,7 @@ apt update && \
 apt install -y homegear homegear-management homegear-adminui homegear-nodes-core homegear-nodes-extra homegear-homematicbidcos \
     homegear-homematicwired homegear-insteon homegear-max homegear-philipshue homegear-sonos homegear-kodi \
     homegear-ipcam homegear-beckhoff homegear-knx homegear-enocean homegear-intertechno homegear-nanoleaf \
-    homegear-ccu homegear-mbus homegear-influxdb
+    homegear-ccu homegear-mbus homegear-influxdb && \
 \
 rm /var/lib/homegear/homegear_updated
 COPY run.sh /run.sh
