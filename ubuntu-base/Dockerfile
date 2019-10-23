@@ -16,7 +16,11 @@ apt install -y homegear homegear-management homegear-adminui homegear-nodes-core
     homegear-ipcam homegear-beckhoff homegear-knx homegear-enocean homegear-intertechno homegear-nanoleaf \
     homegear-ccu homegear-mbus homegear-influxdb && \
 \
+
+#
 rm /var/lib/homegear/homegear_updated
+
+COPY main.conf /etc/homegear/main.conf
 COPY run.sh /run.sh
 RUN chmod +x /run.sh
 ENTRYPOINT ["/bin/bash", "-c", "/run.sh"]
