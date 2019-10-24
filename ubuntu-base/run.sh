@@ -15,6 +15,6 @@ chown homegear:homegear /var/run/homegear
 /etc/homegear/homegear-start.sh
 homegear -c /config/homegear/config -u homegear -g homegear -p /var/run/homegear/homegear.pid &
 homegear-management -p /var/run/homegear/homegear-management.pid &
-tail -f /config/log/homegear/homegear.log &
+tail -f /var/log/homegear/homegear.log &
 child=$!
 wait "$child"
