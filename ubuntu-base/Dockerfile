@@ -18,7 +18,7 @@ apt install -y homegear homegear-management homegear-adminui homegear-nodes-core
 
 rm /var/lib/homegear/homegear_updated
 
-COPY main.conf /config/homegear/config/main.conf
+COPY main.conf /main.conf
 COPY run.sh /run.sh
 RUN chmod +x /run.sh
 ENTRYPOINT ["/bin/bash", "-c", "/run.sh"]
