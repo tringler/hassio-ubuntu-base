@@ -1,5 +1,4 @@
-# Downgrade to 16.04 --> https://forum.homegear.eu/t/varlibdpkginfohomegear-influxdbpostinst-line-31-insserv-command-not-found/3159
-ARG BUILD_FROM=homeassistant/base-ubuntu:16.04
+ARG BUILD_FROM=homeassistant/base-ubuntu:18.04
 FROM ${BUILD_FROM}
 
 # Homegear installation - https://homegear.eu/downloads.html
