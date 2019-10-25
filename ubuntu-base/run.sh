@@ -9,24 +9,22 @@ _term() {
 
 trap _term SIGTERM
 
+mkdir -p /var/run/homegear
 mkdir -p /config/homegear/config
 mkdir -p /config/homegear/data
 mkdir -p /config/homegear/log
+touch /config/homegear/log/homegear.log
 
 cp -Rn /etc/homegear/* /config/homegear/config
 cp -Rn /var/lib/homegear/* /config/homegear/data
 
-chown -R homegear:homegear /config/homegear/config
-chown -R homegear:homegear /config/homegear/data
-
-
 mv /main.conf /config/homegear/config/main.conf
 mv /rpcservers.conf /config/homegear/config/rpcservers.conf
 
-touch /config/homegear/log/homegear.log
-
-mkdir -p /var/run/homegear
 chown homegear:homegear /var/run/homegear
+chown -R homegear:homegear /config/homegear/config
+chown -R homegear:homegear /config/homegear/data
+chown -R homegear:homegear /config/homegear/log
 
 /etc/homegear/homegear-start.sh
 
