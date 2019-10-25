@@ -13,7 +13,13 @@ mkdir -p /config/homegear/config
 mkdir -p /config/homegear/data
 mkdir -p /config/homegear/log
 
-cp -R /etc/homegear/* /config/homegear/config
+cp -Rn /etc/homegear/* /config/homegear/config
+cp -Rn /var/lib/homegear/* /config/homegear/data
+
+chown -R homegear:homegear /config/homegear/config
+chown -R homegear:homegear /config/homegear/data
+
+
 mv /main.conf /config/homegear/config/main.conf
 
 touch /config/homegear/log/homegear.log
