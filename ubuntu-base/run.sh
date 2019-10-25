@@ -17,7 +17,6 @@ touch /config/homegear/log/homegear.log
 
 cp -Rnp /etc/homegear/* /config/homegear/config
 cp -Rnp /var/lib/homegear/* /config/homegear/data
-cp -Rnp /var/log/homegear/* /config/homegear/log
 
 mv /main.conf /config/homegear/config/main.conf
 mv /rpcservers.conf /config/homegear/config/rpcservers.conf
