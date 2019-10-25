@@ -25,6 +25,7 @@ chown homegear:homegear /var/run/homegear
 chown -R homegear:homegear /config/homegear/config
 chown -R homegear:homegear /config/homegear/data
 chown -R homegear:homegear /config/homegear/log
+chown -R homegear:homegear /ssl
 
 /etc/homegear/homegear-start.sh
 
