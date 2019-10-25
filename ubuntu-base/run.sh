@@ -9,13 +9,20 @@ _term() {
 
 trap _term SIGTERM
 
+mkdir -p /config/homegear/config
+mkdir -p /config/homegear/data
+mkdir -p /config/homegear/log
+
 cp -R /etc/homegear/* /config/homegear/config
 mv /main.conf /config/homegear/config/main.conf
+
 touch /config/homegear/log/homegear.log
 
 mkdir -p /var/run/homegear
 chown homegear:homegear /var/run/homegear
+
 /etc/homegear/homegear-start.sh
+
 homegear -c /config/homegear/config -u homegear -g homegear -p /var/run/homegear/homegear.pid &
 homegear-management -p /var/run/homegear/homegear-management.pid &
 tail -f /config/homegear/log/homegear.log &
