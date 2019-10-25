@@ -15,17 +15,16 @@ mkdir -p /config/homegear/data
 mkdir -p /config/homegear/log
 touch /config/homegear/log/homegear.log
 
-cp -Rn /etc/homegear/* /config/homegear/config
-cp -Rn /var/lib/homegear/* /config/homegear/data
+cp -Rnp /etc/homegear/* /config/homegear/config
+cp -Rnp /var/lib/homegear/* /config/homegear/data
+cp -Rnp /var/log/homegear/* /config/homegear/log
 
 mv /main.conf /config/homegear/config/main.conf
 mv /rpcservers.conf /config/homegear/config/rpcservers.conf
 
 chown homegear:homegear /var/run/homegear
-chown -R homegear:homegear /config/homegear/config
-chown -R homegear:homegear /config/homegear/data
-chown -R homegear:homegear /config/homegear/log
-chown -R homegear:homegear /ssl
+chown root:root /ssl/fullchain.pem
+chown homegear:homegear /ssl/privkey.pem
 
 /etc/homegear/homegear-start.sh
 
