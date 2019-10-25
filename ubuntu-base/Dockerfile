@@ -19,6 +19,7 @@ apt install -y homegear homegear-management homegear-adminui homegear-nodes-core
 rm /var/lib/homegear/homegear_updated
 
 COPY main.conf /main.conf
+COPY rpcservers.conf /rpcservers.conf
 COPY run.sh /run.sh
 RUN chmod +x /run.sh
 ENTRYPOINT ["/bin/bash", "-c", "/run.sh"]

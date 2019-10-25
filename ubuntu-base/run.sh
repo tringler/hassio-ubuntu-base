@@ -21,6 +21,7 @@ chown -R homegear:homegear /config/homegear/data
 
 
 mv /main.conf /config/homegear/config/main.conf
+mv /rpcservers.conf /config/homegear/config/rpcservers.conf
 
 touch /config/homegear/log/homegear.log
 
