@@ -22,7 +22,7 @@
     },
     "map": [
       "config:rw",
-      "ssl:rw"
+      "ssl"
     ],
     "schema": {
       "devices": ["match(\/dev\/tty[A-Z]*[0-9]:rwm)"],

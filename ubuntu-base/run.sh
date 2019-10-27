@@ -18,12 +18,13 @@ touch /config/homegear/log/homegear.log
 cp -Rnp /etc/homegear/* /config/homegear/config
 cp -Rnp /var/lib/homegear/* /config/homegear/data
 
+openssl pkey -in /ssl/privkey.pem -out /config/homegear/config/homegear.crt -pubout
+cp  /ssl/privkey.pem /config/homegear/config/homegear.key
+
 mv /main.conf /config/homegear/config/main.conf
 mv /rpcservers.conf /config/homegear/config/rpcservers.conf
 
 chown homegear:homegear /var/run/homegear
-chown root:root /ssl/fullchain.pem
-chown homegear:homegear /ssl/privkey.pem
 
 /etc/homegear/homegear-start.sh
 
