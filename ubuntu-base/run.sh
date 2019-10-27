@@ -15,8 +15,8 @@ mkdir -p /config/homegear/data
 mkdir -p /config/homegear/log
 touch /config/homegear/log/homegear.log
 
-cp -Rnp /etc/homegear/* /config/homegear/config
-cp -Rnp /var/lib/homegear/* /config/homegear/data
+cp -R /etc/homegear/* /config/homegear/config
+cp -R /var/lib/homegear/* /config/homegear/data
 
 openssl pkey -in /ssl/privkey.pem -out /config/homegear/config/homegear.crt -pubout
 cp  /ssl/privkey.pem /config/homegear/config/homegear.key
@@ -24,9 +24,12 @@ cp  /ssl/privkey.pem /config/homegear/config/homegear.key
 mv /main.conf /config/homegear/config/main.conf
 mv /rpcservers.conf /config/homegear/config/rpcservers.conf
 
+chown -R homegear:homegear /config/homegear/config
 chown homegear:homegear /var/run/homegear
 
 /etc/homegear/homegear-start.sh
+
+
 
 homegear -c /config/homegear/config -u homegear -g homegear -p /var/run/homegear/homegear.pid &
 homegear-management -p /var/run/homegear/homegear-management.pid &
