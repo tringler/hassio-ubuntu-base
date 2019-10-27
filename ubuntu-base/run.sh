@@ -25,6 +25,8 @@ mv /main.conf /config/homegear/config/main.conf
 mv /rpcservers.conf /config/homegear/config/rpcservers.conf
 
 chown homegear:homegear /var/run/homegear
+chown homegear:homegear /config/homegear/config/main.conf
+chown homegear:homegear /config/homegear/config/rpcservers.conf
 
 /etc/homegear/homegear-start.sh
 
