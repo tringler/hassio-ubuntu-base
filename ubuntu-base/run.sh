@@ -28,6 +28,8 @@ chown homegear:homegear /var/run/homegear
 chown homegear:homegear /config/homegear/config/main.conf
 chown homegear:homegear /config/homegear/config/rpcservers.conf
 
+chown root:root /config/homegear/config/homegear.crt
+
 /etc/homegear/homegear-start.sh
 
 
