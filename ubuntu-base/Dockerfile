@@ -20,6 +20,7 @@ rm /var/lib/homegear/homegear_updated
 
 COPY main.conf /main.conf
 COPY rpcservers.conf /rpcservers.conf
+COPY rpcclients.conf /rpcclients.conf
 COPY run.sh /run.sh
 RUN chmod +x /run.sh
 ENTRYPOINT ["/bin/bash", "-c", "/run.sh"]
