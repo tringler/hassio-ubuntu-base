@@ -14,6 +14,12 @@ mkdir -p /config/homegear/config
 mkdir -p /config/homegear/data
 mkdir -p /config/homegear/log
 touch /config/homegear/log/homegear.log
+touch /config/homegear/log/homegear-management.log
+touch /config/homegear/log/homegear-scriptengine.log
+touch /config/homegear/log/homegear.err
+touch /config/homegear/log/homegear-management.err
+touch /config/homegear/log/homegear-scriptengine.err
+
 
 cp -Rnp /etc/homegear/* /config/homegear/config
 cp -Rnp /var/lib/homegear/* /config/homegear/data
