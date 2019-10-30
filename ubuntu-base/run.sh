@@ -32,6 +32,7 @@ chown homegear:homegear /var/run/homegear
 chown homegear:homegear /config/homegear/config/main.conf
 chown homegear:homegear /config/homegear/config/rpcservers.conf
 chown homegear:homegear /config/homegear/config/rpcclients.conf
+chown -R homegear:homegear /config/homegear/log
 
 /etc/homegear/homegear-start.sh
 
