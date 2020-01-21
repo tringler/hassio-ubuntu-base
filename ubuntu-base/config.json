@@ -16,14 +16,10 @@
     "boot": "auto",
     "map": [
       "config:rw",
-      "ssl"
+      "ssl",
+      "share"
     ],
-    "schema": {
-      "devices": ["match(\/dev\/tty[A-Z]*[0-9]:rwm)"],
-      "ssl": "bool"
-    },
-    "options": {
-      "devices": ["/dev/ttyAMA0:rwm"],
-      "ssl": false
-  }
+    "host_network": "true",
+    "schema": {},
+    "options": {}
 }
